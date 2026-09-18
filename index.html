@@ -3,12 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript </title>
+    <title>EMPLOYEE MANAGEMENT DASHBOARD</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
-<script src=./script.js></script>
+      <header class="header">
 
- </body>
-</html>
+        <h1>EMPLOYEE MANAGEMENT SYSTEM</h1>
+
+        <div class="date-time">
+          <p id="today">TODAY: Thursday</p>
+          <p id="Time">TIME: 2' Clock</p>
+        </div>
+      </header>
+        
+
+        <main class="container">
+          <div  id="statusMessage" class="statusMessage">
+            Loading Employees.....
+          </div>
+
+       <section class="search-section">
+        <div class="search">
+           <label for="">Search Employee:</label>
+           <input type="text"  id="serach" placeholder="search Employee">
+           <button id="search-btn">Search</button>         
+        </div>
+
+        <div class="department">
+              <button class="filter-btn active" department="all">ALL EMPLOYEES</button>
+              <button class="filter-btn" department="IT">IT</button>
+              <button class="filter-btn" department="HR">HR</button>
+              <button class="filter-btn" department="Finance">Finance</button>
+              <button class="filter-btn" department="Marketing">Marketing</button>
+        </div>
+
+
+        <div class="sort-section">
+        <label for="sortSelect">Sort Employees:</label>
+        <select id="sortSelect">
+          <option value="name-asc">Name-asc ↑</option>
+          <option value="name-desc">Name-desc ↓</option>
+          <option value="age-asc">Age-asc ↑</option>
+          <option value="age-desc">Age-desc ↓</option>
+          <option value="salary-asc">Salary-asc ↑</option>
+          <option value="salary-des">Salary-desc ↓</option>
+      </select>
+      </div>
+      </section>
+
+                 <section class="dashboard">
+                  <div class="salary1">
+                    <h3>Total Employees:</h3>
+                    <p id="totalEmployee">30</p>
+                  </div>
+
+                  <div class="salary1">
+                    <h3>Total Salary:</h3>
+                    <p id="totalSalary">-</p>                 
+                  </div>
+                  
+                  <div class="salary1">
+                    <h3>Average Salary:</h3>
+                    <p id="averageSalary">-</p>
+                  </div>
+                 </section>
+
+                 <section class="highest-paid">
+                <h2>Highest Paid Employee</h2>
+                <p id="highEmployeeName">Name:HENRY HIL</p>
+                <p id="highEmployeeSalary">Salary:80000</p>
+                 </section>
+               
+                 <section>
+              <h2 class="section-title">Employees</h2>
+              <div  id="employeeContainer" class="employee-grid">
+
+              </div>
+              </section>
+
+              <section class="add-employee">
+
+            <h2>Add Employee</h2>
+            <form id="employeeForm">
+              <div class="form-group">
+                  
+            <label for="">NAME:</label>
+            <input type="text" id="name" placeholder="Enter employee name"><br>
+            <label for="">AGE:</label>
+            <input type="number" id="age" placeholder="Enter employee age"><br>
+            <label for ="">EMAIL:</label>
+
+            <input type="email" id="email" placeholder="Enter employee email"><br>
+            <label for="">DEPARTMENT:</label>
+
+            <select id=""> 
+                   <option value="">---select Department---</option>
+                    <option value="">IT</option>
+                    <option value="">HR</option>                                        
+                    <option value="">Finance</option>
+                    <option value="">Marketing</option>
+            </select>
+          
+          </div>
+
+          <div class="form-group">
+                  <label for="employeeSalary">Salary</label>
+                  <input type="number" id="employeeSalary" placeholder="Enter employee Salary">
+          </div>  
+
+                  <button type="submit" class="add-btn">Add Employee</button>      
+          
+            </form>
+
+     </section>  
+     </main>
+
+     <script src="./task8.js"></script>
+
+    </body>
+   </html>
